@@ -10,10 +10,10 @@
             // Day04.Solve();
             // Day05.Solve();
             // Day06.Solve();
-            Day07.Solve();
-            Day08.Solve();
-            Day09.Solve();
-            Day10.Solve();
+            // Day07.Solve();
+            // Day08.Solve();
+            // Day09.Solve();
+            // Day10.Solve();
             Day11.Solve();
             Day13.Solve();
             Day14.Solve();
