@@ -2,7 +2,7 @@
 {
     public class Program
     {
-        public static void Main(string[] args)
+        public static void Main()
         {
             // Day01.Solve();
             // Day02.Solve();
@@ -15,7 +15,7 @@
             // Day09.Solve();
             // Day10.Solve();
             // Day11.Solve();
-            Day12.Solve();
+            // Day12.Solve();
             Day13.Solve();
             Day14.Solve();
             Day15.Solve();
