@@ -10,7 +10,7 @@ public partial class Day01
             .Select(line => line.Trim().Where(c => char.IsDigit(c)).ToArray())
             .Select(digits => int.Parse($"{digits.First()}{digits.Last()}"))
             .Sum();
-        Console.WriteLine($"Day1.1: {res}");
+        Console.WriteLine($"Day01.1: {res}");
 
         return this;
     }
@@ -25,7 +25,7 @@ public partial class Day01
            .Select(line => line.Trim().Where(c => char.IsDigit(c)).ToArray())
            .Select(digits => int.Parse($"{digits.First()}{digits.Last()}"))
            .Sum();
-        Console.WriteLine($"Day1.2: {res}");
+        Console.WriteLine($"Day01.2: {res}");
 
         return this;
     }

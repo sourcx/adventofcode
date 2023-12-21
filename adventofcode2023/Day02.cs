@@ -60,7 +60,7 @@ public class Day02
             }
         }
 
-        Console.WriteLine($"Day2.1: {sumPossibleIds}");
+        Console.WriteLine($"Day02.1: {sumPossibleIds}");
 
         return this;
     }
@@ -118,7 +118,7 @@ public class Day02
             power += maxRed * maxGreen * maxBlue;
         }
 
-        Console.WriteLine($"Day2.1: {power}");
+        Console.WriteLine($"Day02.1: {power}");
 
         return this;
     }

@@ -54,7 +54,7 @@ public class Day03
             }
         }
 
-        Console.WriteLine($"Day3.1: {sum}");
+        Console.WriteLine($"Day03.1: {sum}");
 
         return this;
     }
@@ -207,7 +207,7 @@ public class Day03
             }
         }
 
-        Console.WriteLine($"Day3.2: {sum}");
+        Console.WriteLine($"Day03.2: {sum}");
 
         return this;
     }
