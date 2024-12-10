@@ -4,12 +4,13 @@ class Day01
 {
     public void Run()
     {
+        Console.WriteLine("Day 01");
+
         var list1 = new List<int>();
         var list2 = new List<int>();
 
         foreach (var line in File.ReadAllLines("input/1"))
         {
-            Console.WriteLine(line);
             list1.Add(int.Parse(line.Split(" ").First()));
             list2.Add(int.Parse(line.Split(" ").Last()));
         }
