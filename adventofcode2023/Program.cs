@@ -20,8 +20,8 @@
 // new Day18().Part1().Part2();
 // new Day19().Part1().Part2();
 // new Day20().Part1().Part2();
-new Day21().Part1().Part2();
+// new Day21().Part1().Part2();
 // new Day22().Part1().Part2();
 // new Day23().Part1().Part2();
-// new Day24().Part1().Part2();
+new Day24().Part1().Part2();
 // new Day25().Part1().Part2();

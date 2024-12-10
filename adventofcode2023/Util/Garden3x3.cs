@@ -1,6 +1,3 @@
-using System.Drawing;
-using System.Runtime.CompilerServices;
-
 namespace Aoc.Util;
 
 public class Garden3x3

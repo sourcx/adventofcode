@@ -1,4 +1,3 @@
-
 namespace Aoc.Util;
 
 public class Maze

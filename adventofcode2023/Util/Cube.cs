@@ -1,3 +1,5 @@
+namespace Aoc.Util;
+
 public class Cube
 {
     public int X { get; set; }

@@ -1,5 +1,3 @@
-using System.Drawing;
-
 namespace Aoc.Util;
 
 public class Garden
