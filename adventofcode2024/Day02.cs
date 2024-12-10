@@ -4,7 +4,7 @@ class Day02
 {
     public void Run()
     {
-        Console.WriteLine("Day 02");
+        Console.WriteLine(GetType().Name);
 
         var reports = new List<List<int>>();
 

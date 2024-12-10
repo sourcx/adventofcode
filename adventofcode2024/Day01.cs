@@ -4,7 +4,7 @@ class Day01
 {
     public void Run()
     {
-        Console.WriteLine("Day 01");
+        Console.WriteLine(GetType().Name);
 
         var list1 = new List<int>();
         var list2 = new List<int>();
