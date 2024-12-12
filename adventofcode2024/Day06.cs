@@ -21,7 +21,7 @@ class Day06
         // var fileName = "testinput/6";
         var fileName = "input/6";
 
-        // RunPart1(fileName);
+        RunPart1(fileName);
         RunPart2(fileName);
     }
 
@@ -37,24 +37,6 @@ class Day06
         Util.PrintInPlace($"How many distinct positions will the guard visit before leaving the mapped area? {nrVisited}");
         Console.WriteLine();
     }
-
-    // private int CountDistinctVisited(char[,] matrix)
-    // {
-    //     var nrVisited = 0;
-
-    //     for (int y = 0; y < matrix.GetLength(0); y++)
-    //     {
-    //         for (int x = 0; x < matrix.GetLength(1); x++)
-    //         {
-    //             if (matrix[y, x] == Visited)
-    //             {
-    //                 nrVisited++;
-    //             }
-    //         }
-    //     }
-
-    //     return nrVisited;
-    // }
 
     private List<(int x, int y)> GetDistinctVisited(char[,] matrix)
     {

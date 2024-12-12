@@ -6,6 +6,8 @@ class Util
     {
     }
 
+    const char Outside = '_';
+
     public static char[,] ReadMatrix(string fileName)
     {
         var lines = File.ReadAllLines(fileName);
@@ -79,5 +81,51 @@ class Util
         }
 
         return copy;
+    }
+
+    public static char[,] NewMatrix(int height, int width, char init)
+    {
+        char[,] matrix = new char[height, width];
+
+        for (int y = 0; y < height; y++)
+        {
+            for (int x = 0; x < width; x++)
+            {
+                matrix[y, x] = init;
+            }
+        }
+
+        return matrix;
+    }
+
+    public char Get(char[,] matrix, (int x, int y) pos)
+    {
+        return Get(matrix, pos.x, pos.y);
+    }
+
+    public char Get(char[,] matrix, int x, int y)
+    {
+        if (y < 0 || y >= matrix.GetLength(0) || x < 0 || x >= matrix.GetLength(1))
+        {
+            return Outside;
+        }
+
+        return matrix[y, x];
+    }
+
+    public static bool Set(char[,] matrix, (int x, int y) pos, char c)
+    {
+        return Set(matrix, pos.x, pos.y, c);
+    }
+
+    public static bool Set(char[,] matrix, int x, int y, char c)
+    {
+        if (y < 0 || y >= matrix.GetLength(0) || x < 0 || x >= matrix.GetLength(1))
+        {
+            return false;
+        }
+
+        matrix[y, x] = c;
+        return true;
     }
 }
