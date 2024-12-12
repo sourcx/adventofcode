@@ -18,7 +18,7 @@ class Day04
     {
         Console.WriteLine(GetType().Name);
 
-        var matrix = ReadMatrix("input/4");
+        var matrix = Util.ReadMatrix("input/4");
         var h = matrix.GetLength(0);
         var w = matrix.GetLength(1);
 
@@ -28,25 +28,6 @@ class Day04
         xmas = NrTimesX_mas(matrix, h, w);
         Console.WriteLine($"The number of times an X-MAS appears is {xmas}");
     }
-
-    private char[,] ReadMatrix(string file)
-    {
-        var lines = File.ReadAllLines(file);
-        var height = lines.Length;
-        var width = lines[0].Length;
-        var matrix = new char[height, width];
-
-        for (var y = 0; y < height; y++)
-        {
-            for (var x = 0; x < width; x++)
-            {
-                matrix[y, x] = lines[y][x];
-            }
-        }
-
-        return matrix;
-    }
-
 
     private int NrTimesXmas(char[,] matrix, int height, int width)
     {
