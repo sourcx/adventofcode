@@ -6,19 +6,22 @@ class DayXX
     {
         Console.WriteLine(GetType().Name);
 
-        RunPart1();
-        RunPart2();
+        var fileName = "testinput/xx";
+        RunPart1(fileName);
+        RunPart2(fileName);
     }
 
-    private void RunPart1()
+    private void RunPart1(string fileName)
     {
-        using var reader = new StreamReader("input/x");
+        var data = File.ReadAllLines(fileName);
 
         // Console.WriteLine($"The {res}");
     }
 
-    private void RunPart2()
+    private void RunPart2(string fileName)
     {
+        var data = File.ReadAllLines(fileName);
+
         // Console.WriteLine($"The {res}");
     }
 }
