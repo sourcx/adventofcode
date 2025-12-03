@@ -26,6 +26,24 @@ class Util
         return matrix;
     }
 
+    public static int[,] ReadIntMatrix(string fileName)
+    {
+        var lines = File.ReadAllLines(fileName);
+        var height = lines.Length;
+        var width = lines[0].Length;
+        var matrix = new int[height, width];
+
+        for (var y = 0; y < height; y++)
+        {
+            for (var x = 0; x < width; x++)
+            {
+                matrix[y, x] = int.Parse($"{lines[y][x]}");
+            }
+        }
+
+        return matrix;
+    }
+
     public static void PrintInPlace(string message)
     {
         Console.SetCursorPosition(0, 0);
@@ -83,6 +101,21 @@ class Util
         return copy;
     }
 
+    public static bool[,] Copy(bool[,] matrix)
+    {
+        var copy = new bool[matrix.GetLength(0), matrix.GetLength(1)];
+
+        for (var y = 0; y < matrix.GetLength(0); y++)
+        {
+            for (var x = 0; x < matrix.GetLength(1); x++)
+            {
+                copy[y, x] = matrix[y, x];
+            }
+        }
+
+        return copy;
+    }
+
     public static char[,] NewMatrix(int height, int width, char init)
     {
         char[,] matrix = new char[height, width];
@@ -98,16 +131,33 @@ class Util
         return matrix;
     }
 
-    public char Get(char[,] matrix, (int x, int y) pos)
+    public static char Get(char[,] matrix, (int x, int y) pos)
     {
         return Get(matrix, pos.x, pos.y);
     }
 
-    public char Get(char[,] matrix, int x, int y)
+
+    public static char Get(char[,] matrix, int x, int y)
     {
         if (y < 0 || y >= matrix.GetLength(0) || x < 0 || x >= matrix.GetLength(1))
         {
             return Outside;
+        }
+
+        return matrix[y, x];
+    }
+
+    public static int GetInt(int[,] matrix, (int x, int y) pos)
+    {
+        return GetInt(matrix, pos.x, pos.y);
+    }
+
+
+    public static int GetInt(int[,] matrix, int x, int y)
+    {
+        if (y < 0 || y >= matrix.GetLength(0) || x < 0 || x >= matrix.GetLength(1))
+        {
+            return -1;
         }
 
         return matrix[y, x];
@@ -127,5 +177,10 @@ class Util
 
         matrix[y, x] = c;
         return true;
+    }
+
+    public static (int x, int y) Add((int x, int y) lhs, (int x, int y) rhs)
+    {
+        return (lhs.x + rhs.x, lhs.y + rhs.y);
     }
 }
